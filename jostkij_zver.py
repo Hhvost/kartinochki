@@ -10,11 +10,11 @@ line_sky_mountains=[(0,262),(72,87),(124,207),(206,112),(358,340),(467,105),(503
 line_mountains_land=[(0,448),(28,437),(58,433),(77,433),(128,425),(316,424),(323,427),(326,426),(329,432),(332,434),(333,450),(335,453),(340,465),(350,462),(600,486)]
 
 ##небо
-polygon(screen,(176,222,234),[(0,0)]+line_sky_mountains+[(600,0)])
-lines(screen,(28,27,32),False,line_sky_mountains,4)
-line(screen,(28,27,32),[124,207],[206,112],5)
-line(screen,(28,27,32),[467,105],[503,147],4)
-line(screen,(28,27,32),[503,147],[600,32],5)
+polygon(screen, (176,222,234), [(0,0)] + line_sky_mountains + [(600,0)])
+lines(screen, (28,27,32), False, line_sky_mountains, 4)
+line(screen, (28,27,32), [124,207], [206,112], 5)
+line(screen, (28,27,32), [467,105], [503,147], 4)
+line(screen, (28,27,32), [503,147], [600,32], 5)
 
 ##горы
 polygon(screen,(180,180,180),line_mountains_land+line_sky_mountains[::-1])
@@ -22,31 +22,31 @@ lines(screen,(28,27,32),False,line_mountains_land,1)
 
 ##жесткий зверь
 #s-размер жесткого зверя
-def jostkij_zver(x,y,s,orientation):
+def jostkij_zver(x,y,s,orientation):   #x-абсцисса y-ордината s-коэффициент масштабирования
     
     #ОСНОВА ЗВЕРЯ
     #тело зверя
     ellipse(screen,(255,255,255),(x,y,135*s,55*s))
     #шея зверя
-    ellipse(screen, (255, 255, 255),(x+105*s,y-80*s,40*s,100*s))
+    ellipse(screen, (255, 255, 255),(x+105*s, y-80*s, 40*s, 100*s))
     #голова зверя
-    ellipse(screen, (255, 255, 255), (x+110*s,y-105*s,50*s,30*s))
+    ellipse(screen, (255, 255, 255), (x+110*s, y-105*s, 50*s, 30*s))
     #уши зверя
 
 
     #ГЛАЗ ЗВЕРЯ
     #радужка зверя
-    ellipse(screen, (230, 129, 255), (x+123*s,y-100*s,25*s,15*s))
+    ellipse(screen, (230, 129, 255), (x+123*s, y-100*s, 25*s, 15*s))
     #зрачёк зверя
-    ellipse(screen, (0, 0, 0), (x+132*s,y-97*s,9*s,9*s))
+    ellipse(screen, (0, 0, 0), (x+132*s, y-97*s, 9*s, 9*s))
     #блик зверя
     ellipse(screen, (255, 255, 255), (x+131*s, y-97, 5*s, 5*s))
 
 
     #НОГИ ЗВЕРЯ
     #бедра зверя
-    ellipse(screen, (255, 255, 255), (x+8*s,y+25*s,20*s,50*s))
-    ellipse(screen, (255, 255, 255), (x+35*s,y+45*s,20*s,50*s))
+    ellipse(screen, (255, 255, 255), (x+8*s, y+25*s, 20*s, 50*s))
+    ellipse(screen, (255, 255, 255), (x+35*s, y+45*s, 20*s, 50*s))
     ellipse(screen, (255, 255, 255), (x+85*s, y+25*s, 20*s, 50*s))
     ellipse(screen, (255, 255, 255), (x+103*s, y+45*s, 20*s, 50*s))
     #икры зверя
@@ -62,7 +62,7 @@ def jostkij_zver(x,y,s,orientation):
 
 def jostkaja_lujaika(x,y,s):
     #лужайка
-    ellipse(screen,(113,201,52),(x-113*s,y-113*s,226*s,226*s))
+    ellipse(screen,(140, 203, 94),(x-113*s, y-113*s, 226*s, 226*s))
 
     def cvetochki():
         #лепестки 2 план
@@ -97,7 +97,7 @@ def jostkaja_lujaika(x,y,s):
 jostkaja_lujaika(20,500,0.5)
 jostkaja_lujaika(400,700,1)
 jostkaja_lujaika(20,500,0.5)
-jostkij_zver(75,530,1,1)
+jostkij_zver(75,550,1,1)
 
 pygame.display.update()
 
